@@ -1,0 +1,44 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('/img/wallpaperflare.com_wallpaper.jpg');
+    background-size: cover;
+    position: fixed;
+    height:100vh;
+    width: 100vw;
+}
+.container{
+    
+    
+   
+}
+
+
+.header{
+    background-color: black;
+    padding: unset;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem;
+    mix-blend-mode: soft-light;
+}
+.logo{
+}
+ul{
+    display: flex;
+    gap: 1rem;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+   
+}
+button{
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
