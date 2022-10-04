@@ -4,41 +4,111 @@
     padding: 0;
 }
 body{
+    
+}
+.container{
     background-image: url('/img/wallpaperflare.com_wallpaper.jpg');
     background-size: cover;
     position: fixed;
-    height:100vh;
+    display: grid;
+    grid-template-rows: 5rem;
+    height: 100vh;
     width: 100vw;
-}
-.container{
-    
-    
-   
+  
 }
 
 
-.header{
-    background-color: black;
-    padding: unset;
+.header__middle{
     display: flex;
-    justify-content: flex-end;
-    padding: 2rem;
-    mix-blend-mode: soft-light;
-}
-.logo{
-}
-ul{
-    display: flex;
-    gap: 1rem;
-    a{
-        text-decoration: none;
-        color: white;
+    background: rgba(0, 0, 0, 0.80);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    &--logo{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 10%;
+            height: 100%;
+        }
     }
-   
+}
+
+
+
+
+
+.header__right{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  
+    width: 100%;
+    height: 5rem;
+
+    &--links{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      
+        padding: 0 3rem;
+    
+    }
+
+    ul{
+        display: flex;
+        gap: 3rem;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+.hero-container{
+    align-self:center;
+    height: 30vh;
+}
+
+.logo-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span{
+        font-size: 3rem;
+        color: white
+    }
 }
 button{
     a{
         text-decoration: none;
+        color: white;
+        font-size: 1.4rem;
+    }
+}
+
+
+.btns{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    gap: 5rem;
+
+    button{
+        padding: 0.4rem 4rem;
+        border: 2px solid black ;
+        border-radius:999px ;
+        background-color: transparent;
+    }
+}
+
+button:hover{
+    
+    background-color: white;
+    border: 2px solid white ;
+    transition: linear;
+    a{
         color: black;
     }
 }
