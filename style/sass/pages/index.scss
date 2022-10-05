@@ -5,9 +5,9 @@ body{
 a{
     text-decoration: none;
     color: white;
+    background-color: transparent;
 }
 .container{
-    display: flex;
     height: 100vh;
     width: 100vw;
     background-image: url('/img/wallpaperflare.com_wallpaper.jpg');
@@ -26,9 +26,17 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 1s linear;
+
     img{
         width: 5rem;
         height: 5rem;
+        
+    }
+
+    :hover{
+        transform: rotate(360deg);
+        transition: 0.5s ease-in;
     }
 }
 
@@ -62,6 +70,7 @@ a{
 .btn{
     display: flex;
     gap: 2rem;
+    
     button{
         background-color: transparent;
         padding: 0.4rem 4rem;
@@ -72,11 +81,19 @@ a{
         font-weight: 300;
         color: white;
         cursor: pointer;
+        transition: transform 0.2s linear;
     }
     :hover{
         background-color: white;
+        transition: 0.2s ease-in;
+        transform:translateY(-5px);
+        
+
+     
         a{
             color: black;
+            transition: 0.4s;      
+            background-color: transparent;
         }
     }
 }
