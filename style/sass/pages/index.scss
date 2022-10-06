@@ -15,6 +15,9 @@ a{
     display: grid;
     grid-template: 5rem repeat(3,2rem 1fr )/ 3rem 1fr 3rem;
 }
+.background{
+    
+}
 .header{
     display: grid;
     grid-template: 5rem/3rem 1fr 0.5fr 1fr 3rem;
@@ -73,7 +76,7 @@ a{
     
     button{
         background-color: transparent;
-        padding: 0.4rem 4rem;
+        padding: 0.3rem 4rem;
         border-radius: 99px;
         border: 2px solid #000000;
         font-size: 1.3rem;
