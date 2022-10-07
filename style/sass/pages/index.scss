@@ -1,13 +1,6 @@
-body{
-    margin: 0;
-    padding: 0;
-}
-a{
-    text-decoration: none;
-    color: white;
-    background-color: transparent;
-}
+
 .background{
+    position: fixed;
     background-image: url('/img/wallpaperflare.com_wallpaper.jpg');
     background-size: cover;
     height: 100vh;
@@ -19,12 +12,13 @@ a{
 
 
 //hero section
+
 .hero{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    grid-area: 4/2;
+    grid-area: 4/1;
     h1{
         font-size: 4rem;
     }
@@ -52,9 +46,6 @@ a{
         background-color: white;
         transition: 0.2s ease-in;
         transform:translateY(-5px);
-        
-
-     
         a{
             color: black;
             transition: 0.4s;      
