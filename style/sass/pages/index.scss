@@ -3,23 +3,20 @@
     position: fixed;
     background-image: url('/img/wallpaperflare.com_wallpaper.jpg');
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
+    @include full-view-point;
    
 }
-
-
-
 
 //hero section
 
 .hero{
-    display: flex;
+    @include xy-flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     grid-area: 4/1;
     h1{
+        font-style: normal;
+        font-family:serif;
+        color: black;
         font-size: 4rem;
     }
 

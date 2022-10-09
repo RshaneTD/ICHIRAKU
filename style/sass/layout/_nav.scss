@@ -1,8 +1,6 @@
 
 .navigation{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include xy-flex;
     grid-area:1/4/-1/5;
     ul{
         gap: 2rem;

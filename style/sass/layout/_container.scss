@@ -1,17 +1,15 @@
+.layout{
+    display: grid;
+    grid-template: 5rem 2rem 0.5fr 0.5rem 0.4fr 1.5fr 2rem 6rem 2rem/ 5rem repeat(3, 1rem 1fr) 5rem;
+}
 
 .hero-grid{
     display: grid;
     grid-template: repeat(3, 1rem 1rem 1fr)/1fr;
 }
 
-.layout{
+.training__container-text{
     display: grid;
-    grid-template: 5rem repeat(2, 2rem 1fr) 5rem/ 5rem repeat(3, 1rem 1fr) 5rem;
-}
-
-.training-container{
-    display: grid;
-   // background: blue;
     grid-area: 3/2/3/8;
     height: 50vh;
     grid-template: 1fr 1rem 1fr/3fr 1rem 1fr;
@@ -20,4 +18,10 @@
     line-height: 1.5rem;
     font-size: 1.2rem;
     font-weight: 400;
+}
+
+.training__container--card{
+    grid-area: 6/3/7/8;
+    display: grid;
+    grid-template:  repeat(3,2rem) 1fr 6rem  /repeat(3, 1rem 1fr);
 }

@@ -1,0 +1,26 @@
+@mixin m0-p0{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin y-flex{
+    display: flex;
+    align-items: center;
+}
+
+@mixin x-flex{
+    display: flex;
+    justify-content: center;
+}
+
+@mixin xy-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin full-view-point {
+    height: 100vh;
+    width: 100vw;
+}
+

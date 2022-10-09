@@ -1,36 +1,113 @@
-
+//not really useful, just to show that i know css var
 
 .upper-text{
+    @include x-flex;
     font-style: italic;
-    display: flex;
-    justify-content: flex-end;
-  
     text-align: center;
-   // background-color: red;
     grid-area: 1/1;
 }
 .lower-text{
-    display: flex;
-    justify-content: flex-end;
-    text-align: center;
+   @include xy-flex;
     align-items: flex-end;
-   // background-color: yellow;
     grid-area: 3/1;
 }
 
 .trainer-img{
+    margin-top: 1rem;
     grid-area: 1/3/-1;
     background-image: url('/img/profiles/veuve-clicquot-asias-best-female-chef-2015_vicky-lau_2.png');
     background-size:cover ;
-    height: 95%;
+    height: 90%;
     box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.90);
 }
 
 .sy-text{
-    display: flex;
-    height: 15vh;
-    background-color: red;
-    align-items: center;
-    justify-content: center;
-    grid-area: 4/5;
+    @include xy-flex;
+    grid-area: 5/5;
+    text-align: center;
+    font-weight: 300;
+    font-size: 3rem;
 }
+
+
+
+.card{
+   color: black;
+   font-size: 1.2rem;
+   background: rgba(255, 255, 255, 0.74);
+   display: flex;
+   flex-flow: column;
+   border: 3px solid black;
+   box-shadow: 0px 0px 11px 11px rgba(0, 0, 0, 0.90);
+   border-radius: 33px 33px 0px 0px;
+   transition: scale 0.2s ease-in-out;
+   cursor:default;
+   &:hover{
+    scale: 0.95;
+   }
+}
+
+.buy-now{
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--buyNow);
+    transition: scale 0.1s linear;
+    cursor: pointer;
+    &:hover{
+        border-radius: 6px;
+        scale: 1.02;
+        background: lighten($color:#0E6943, $amount: 10);
+        
+    }
+}
+
+.perks{
+    li{
+        text-align: center;
+        padding: 0.8rem;
+        border: solid black;
+        border-width: 1px 0px 1px 0px;
+    }
+}
+
+
+
+//tempura
+.tempura{
+   grid-area: 4/2/6;
+   scale: 0.9;
+}
+
+.card-logo{
+    border-radius: 30px 30px 0px 0px;
+    @include xy-flex;
+    padding: 3rem;
+    img{
+        width: 20%;
+    }
+}
+
+.ramen{
+    grid-area:1/4/5;
+    scale: 0.9;
+}
+
+.sushi{
+    grid-area: 4/6/6;
+    scale: 0.9;
+}
+
+.valid{
+    background: var(--valid);
+}
+
+.not-valid{
+    background-color: var(--not-valid);
+}
+
+
+
+

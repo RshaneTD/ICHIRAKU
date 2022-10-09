@@ -1,0 +1,45 @@
+footer{
+    display: grid;
+    grid-template: 1fr/ repeat(3,1fr) ;
+    grid-area:8/2/9/8;
+}
+
+.footer{
+    display: flex;
+    gap: 10rem;
+}
+
+
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    grid-area: 1/1;
+    img{
+  
+        width: 20%;
+    }
+}
+
+.footer-links{
+    @include xy-flex;
+    
+    grid-area: 1/2;
+    display: flex;
+    gap: 4em;
+   li{
+    line-height: 1.3em;
+   }
+}
+
+.socials{
+    @include x-flex;
+
+    margin-top: 1rem;
+    grid-area: 1/3;
+    
+    
+    ul{
+        display: flex;
+        gap: 1rem;
+    }
+}

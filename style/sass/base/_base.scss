@@ -1,14 +1,13 @@
 .dark-bg{
-    background:  #121111;
-    height: 100vh;
+    background: $bg-color;
 }
 body{
-    margin: 0;
-    padding: 0;
+    @include m0-p0;
     box-sizing: border-box;
 }
 a{
-    text-decoration: none;
     color: white;
     background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
 }
