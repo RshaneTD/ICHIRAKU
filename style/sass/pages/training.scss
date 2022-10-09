@@ -1,22 +1,23 @@
-//not really useful, just to show that i know css var
-
 .upper-text{
     @include x-flex;
+    grid-area: 1/1;
     font-style: italic;
     text-align: center;
-    grid-area: 1/1;
+   
 }
+
 .lower-text{
    @include xy-flex;
-    align-items: flex-end;
-    grid-area: 3/1;
+   grid-area: 3/1;
+   align-items: flex-end;
+
 }
 
 .trainer-img{
-    margin-top: 1rem;
     grid-area: 1/3/-1;
     background-image: url('/img/profiles/veuve-clicquot-asias-best-female-chef-2015_vicky-lau_2.png');
     background-size:cover ;
+    margin-top: 1rem;
     height: 90%;
     box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.90);
 }
@@ -30,46 +31,47 @@
 }
 
 
-
 .card{
-   color: black;
-   font-size: 1.2rem;
-   background: rgba(255, 255, 255, 0.74);
-   display: flex;
-   flex-flow: column;
-   border: 3px solid black;
-   box-shadow: 0px 0px 11px 11px rgba(0, 0, 0, 0.90);
-   border-radius: 33px 33px 0px 0px;
-   transition: scale 0.2s ease-in-out;
-   cursor:default;
+    display: flex;
+    flex-flow: column;
+    background: rgba(255, 255, 255, 0.74);
+    border: 3px solid black;
+    border-radius: 33px 33px 0px 0px;
+    box-shadow: 0px 0px 11px 11px rgba(0, 0, 0, 0.90);
+    color: black;
+    font-size: 1.2rem;
+    cursor:default;
+    transition: scale 0.2s ease-in-out;
+
    &:hover{
     scale: 0.95;
    }
 }
 
 .buy-now{
+    @include x-flex;
+    background: var(--buyNow);
     height: 100%;
     color: white;
-    display: flex;
-    justify-content: center;
     padding: 2rem;
-    background: var(--buyNow);
-    transition: scale 0.1s linear;
     cursor: pointer;
+    transition: scale 0.1s linear;
+  
     &:hover{
+        background: lighten($color:#0E6943, $amount: 10);
         border-radius: 6px;
         scale: 1.02;
-        background: lighten($color:#0E6943, $amount: 10);
-        
     }
 }
 
 .perks{
+
     li{
-        text-align: center;
-        padding: 0.8rem;
         border: solid black;
         border-width: 1px 0px 1px 0px;
+        text-align: center;
+        padding: 0.8rem;
+        
     }
 }
 
@@ -82,8 +84,8 @@
 }
 
 .card-logo{
-    border-radius: 30px 30px 0px 0px;
     @include xy-flex;
+    border-radius: 30px 30px 0px 0px;
     padding: 3rem;
     img{
         width: 20%;

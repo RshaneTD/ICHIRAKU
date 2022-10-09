@@ -1,7 +1,7 @@
 .header{
+    grid-area: 1/1/2/-1;
     display: grid;
     grid-template: 5rem/3rem 1fr 0.5fr 1fr 3rem;
-    grid-area: 1/1/2/-1;
     background-color: rgba(0, 0, 0, 0.93);
 }
 .logo{
@@ -12,7 +12,6 @@
     img{
         width: 5rem;
         height: 5rem;
-        
     }
 
     :hover{

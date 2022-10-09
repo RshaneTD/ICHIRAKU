@@ -9,10 +9,10 @@
 }
 
 .training__container-text{
-    display: grid;
     grid-area: 3/2/3/8;
-    height: 50vh;
+    display: grid;
     grid-template: 1fr 1rem 1fr/3fr 1rem 1fr;
+    height: 50vh;
     color: white;
     letter-spacing: 0.08rem;
     line-height: 1.5rem;

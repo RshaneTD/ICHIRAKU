@@ -1,0 +1,15 @@
+// Contact us button
+.contactus{
+    background-color: darken($color: #ffc0cb, $amount: 10);
+    border: none;
+    border-radius: 99px;    color: black;
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+    &:active{
+        background-color: pink;
+    }
+
+    &:hover{
+        scale:1.01
+    }
+}
