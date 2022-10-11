@@ -5,6 +5,30 @@
         gap: 2rem;
         display: flex;
         list-style: none;  
+        li:nth-child(1)::after,:nth-child(2)::after {
+            content: "";
+            display: block;
+            margin-top: 0.2rem;
+        }
+        
+        li:hover::after{
+            animation: nav-bar 300ms ease-out forwards ;
+        }
     }
 }
 
+
+
+@keyframes nav-bar {
+    0%{
+        width: 0%;
+        height: 0.2rem;
+        background-color: pink;
+    }
+
+    100%{
+        width: 100%;
+        height: 0.2rem;
+        background-color: pink;
+    }
+}

@@ -3,14 +3,15 @@
     grid-area: 1/1;
     font-style: italic;
     text-align: center;
-   
+   font-weight: 300;
 }
 
 .lower-text{
    @include xy-flex;
    grid-area: 3/1;
    align-items: flex-end;
-
+   text-align: center;
+   font-weight: 300;
 }
 
 .trainer-img{
@@ -19,7 +20,7 @@
     background-size:cover ;
     margin-top: 1rem;
     height: 90%;
-    box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.90);
+   @include shadow;
 }
 
 .sy-text{
@@ -30,18 +31,17 @@
     font-size: 3rem;
 }
 
-
 .card{
     display: flex;
     flex-flow: column;
     background: rgba(255, 255, 255, 0.74);
     border: 3px solid black;
     border-radius: 33px 33px 0px 0px;
-    box-shadow: 0px 0px 11px 11px rgba(0, 0, 0, 0.90);
+    @include shadow;
     color: black;
     font-size: 1.2rem;
     cursor:default;
-    transition: scale 0.2s ease-in-out;
+    transition: scale 250ms ease-in-out;
 
    &:hover{
     scale: 0.95;
@@ -55,7 +55,7 @@
     color: white;
     padding: 2rem;
     cursor: pointer;
-    transition: scale 0.1s linear;
+    transition: scale 100ms linear;
   
     &:hover{
         background: lighten($color:#0E6943, $amount: 10);
@@ -75,9 +75,6 @@
     }
 }
 
-
-
-//tempura
 .tempura{
    grid-area: 4/2/6;
    scale: 0.9;
@@ -108,6 +105,7 @@
 
 .not-valid{
     background-color: var(--not-valid);
+    
 }
 
 
