@@ -90,6 +90,52 @@ html {
   scale: 1.01;
 }
 
+.btn {
+  display: flex;
+  gap: 2rem;
+}
+.btn button {
+  background-color: transparent;
+  border: 2px solid #000000;
+  border-radius: 99px;
+  padding: 0.3rem 4rem;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: transform 250ms linear;
+}
+.btn button:hover {
+  background-color: white;
+  color: black;
+  transition: 250ms ease-in;
+  transform: translateY(-5px);
+}
+
+.buttons {
+  grid-area: 4/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
+.buttons button {
+  color: white;
+  cursor: pointer;
+  margin-top: 4rem;
+  border: 1px solid #FFFFFF;
+  border-radius: 22px;
+  padding: 0.7rem 5rem;
+  background-color: transparent;
+  font-weight: 600;
+  transition: 300ms ease-in;
+}
+.buttons button:hover {
+  background-color: white;
+  color: black;
+}
+
 .header {
   grid-area: 1/1/2/-1;
   display: grid;
@@ -236,33 +282,6 @@ footer {
   font-family: serif;
   color: black;
   font-size: 4rem;
-}
-
-.btn {
-  display: flex;
-  gap: 2rem;
-}
-.btn button {
-  background-color: transparent;
-  border: 2px solid #000000;
-  border-radius: 99px;
-  padding: 0.3rem 4rem;
-  color: white;
-  font-family: "Lato", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 300;
-  cursor: pointer;
-  transition: transform 250ms linear;
-}
-.btn :hover {
-  background-color: white;
-  transition: 250ms ease-in;
-  transform: translateY(-5px);
-}
-.btn :hover a {
-  color: black;
-  transition: 0.4s;
-  background-color: transparent;
 }
 
 .upper-text {
@@ -493,7 +512,7 @@ footer {
 
 .menu {
   display: grid;
-  grid-template: 5rem 0.4fr 1fr 4rem 2rem/5rem 1fr 5rem;
+  grid-template: 5rem 0.4fr 1fr 4rem 2rem 2rem/5rem 1fr 5rem;
 }
 
 .menu-text {
@@ -502,42 +521,56 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rebeccapurple;
   line-height: 1.8rem;
   font-size: 1.2rem;
   font-weight: 300;
+  font-size: 1.5rem;
 }
 
 .menu-container {
   grid-area: 3/2;
   display: grid;
-  grid-template: 1fr/2rem repeat(3, 2rem 1fr) 4rem;
+  grid-template: 1fr/1rem repeat(3, 1rem 1fr) 2rem;
   color: black;
-  background-color: blue;
 }
 
-.menu-card {
-  grid-area: 1/3;
-  background-color: red;
+.card-wrapper {
   display: grid;
-  grid-template: 0.5fr 0.1fr 1fr/1fr;
-  border-radius: 22px;
+  border: 2px solid #000000;
+  grid-template: 0.5fr 0.2fr 1fr/1fr;
+  border-radius: 23px;
+  transition: scale 250ms linear;
+  cursor: default;
+}
+.card-wrapper:hover {
+  scale: 1.02;
 }
 
-.ramen-card {
+.first-slot {
+  grid-area: 1/3;
+}
+
+.second-slot {
+  grid-area: 1/5;
+}
+
+.third-slot {
+  grid-area: 1/7;
+}
+
+.img-container {
   grid-area: 1/1/3/3;
-  background-image: url("/img/menu/main/sushi-irl.jpg");
-  background-size: cover;
   border-radius: 22px 22px 0px 0px;
-  background-color: violet;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .menu-card--info {
-  grid-area: 2/1/4/3;
+  grid-area: 2/1/-1/3;
   background: rgba(255, 255, 255, 0.94);
   border-radius: 22px;
   display: grid;
-  grid-template: 2rem 4rem 2rem 3rem 0.3fr 2rem/1fr 2rem;
+  grid-template: 2rem 4rem 2rem 3rem 0.3fr 1rem 0.3fr 1rem/1fr 2rem;
 }
 
 .menu-card--logo {
@@ -546,14 +579,13 @@ footer {
   justify-content: center;
 }
 .menu-card--logo img {
-  background-size: cover;
   width: 4rem;
 }
 
-.question {
+.question-mark {
   grid-area: 1/2;
 }
-.question img {
+.question-mark img {
   cursor: pointer;
   margin-top: 1rem;
   margin-right: 1rem;
@@ -562,7 +594,7 @@ footer {
   justify-content: flex-end;
 }
 
-.ramen-name {
+.recipe-title {
   grid-area: 3/1/3/8;
   margin-top: 1rem;
   display: flex;
@@ -581,24 +613,30 @@ footer {
   gap: 4rem;
 }
 
-.ramen-duration::after {
-  content: "50min";
+.prepTimer::after {
+  content: "";
   display: flex;
   flex-direction: row;
 }
-.ramen-duration img {
+.prepTimer img {
   width: 2rem;
 }
 
-.ramen-rating::after {
-  content: "3/4";
+.rating::after {
+  content: "";
   display: block;
   flex-direction: row;
 }
-.ramen-rating img {
+.rating img {
   width: 2rem;
 }
 
+.non-veg::after {
+  content: "veg";
+  text-decoration: line-through;
+  display: block;
+  flex-direction: row;
+}
 .non-veg img {
   width: 2rem;
 }
@@ -640,22 +678,124 @@ footer {
   background: #7F525B;
   mix-blend-mode: hard-light;
   border-radius: 14px;
-  padding: 1rem 30%;
+  padding: 1.3rem 30%;
+  cursor: pointer;
+}
+.order-btn button:hover {
+  background: #8e5c66;
 }
 
-.buttons {
-  grid-area: 4/2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8rem;
+.ramen-img {
+  background-image: url("/img/menu/main/Tonkotsu-Ramen-Wide.png");
 }
-.buttons button {
-  padding: 0.5rem 5rem;
-  background-color: transparent;
-  margin-top: 2rem;
-  gap: 3rem;
-  border-radius: 99px;
+
+.ramen-prepTime::after {
+  content: "50min";
+}
+
+.ramen-rating::after {
+  content: "5/5";
+}
+
+.sushi-img {
+  background-image: url("/img/menu/main/sushi-irl.jpg");
+}
+
+.sushi-prepTime::after {
+  content: "15min";
+}
+
+.sushi-rating::after {
+  content: "4/5";
+}
+
+.tempura-img {
+  background-image: url("/img/menu/main/ebi-tempura.jpg");
+}
+
+.tempura-prepTime::after {
+  content: "30min";
+}
+
+.tempura-rating::after {
+  content: "4/5";
+}
+
+.lemonade-img {
+  background-image: url("/img/menu/drinks/Cold-Lemonade-Mojito-Cocktail.jpg");
+}
+
+.lemonade-prepTime::after {
+  content: "10min";
+}
+
+.lemonade-rating::after {
+  content: "4/5";
+}
+
+.cucumber-img {
+  background-image: url("/img/menu/drinks/cucumber-cocktail.jpg");
+}
+
+.cucumber-prepTime::after {
+  content: "10min";
+}
+
+.cucumber-rating::after {
+  content: "4/5";
+}
+
+.bloody-img {
+  background-image: url("/img/menu/drinks/bloodyMary-cocktail.jpg");
+}
+
+.bloody-prepTime::after {
+  content: "5min";
+}
+
+.bloody-rating::after {
+  content: "4/5";
+}
+
+.corneto-img {
+  background-image: url("/img/menu/ice-cream/corneto.png");
+}
+
+.corneto-prepTime::after {
+  content: "5min";
+}
+
+.corneto-rating::after {
+  content: "4/5";
+}
+
+.popsicle-img {
+  background-image: url("/img/menu/ice-cream/popcicles.jpg");
+}
+
+.popsicle-prepTime::after {
+  content: "5min";
+}
+
+.popsicle-rating::after {
+  content: "4/5";
+}
+
+.sundae-img {
+  background-image: url("/img/menu/ice-cream/sundae.png");
+}
+
+.sundae-prepTime::after {
+  content: "5min";
+}
+
+.sundae-rating::after {
+  content: "4/5";
+}
+
+.sap {
+  height: 1rem;
+  margin-bottom: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
