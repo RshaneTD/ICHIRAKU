@@ -7,6 +7,7 @@
 .logo{
     @include xy-flex;
     grid-area: 1/3/-1/-4;
+    cursor: pointer;
 
     img{
         width: 5rem;
