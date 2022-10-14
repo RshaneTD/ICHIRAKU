@@ -6,8 +6,6 @@
     @include full-view-point;
 }
 
-//hero section
-
 .hero{
     @include xy-flex;
     flex-direction: column;

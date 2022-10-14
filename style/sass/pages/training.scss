@@ -31,23 +31,6 @@
     font-size: 3rem;
 }
 
-.card{
-    display: flex;
-    flex-flow: column;
-    background: rgba(255, 255, 255, 0.74);
-    border: 3px solid black;
-    border-radius: 33px 33px 0px 0px;
-    @include shadow;
-    color: black;
-    font-size: 1.2rem;
-    cursor:default;
-    transition: scale 250ms ease-in-out;
-
-   &:hover{
-    scale: 0.95;
-   }
-}
-
 .buy-now{
     @include x-flex;
     background: var(--buyNow);
