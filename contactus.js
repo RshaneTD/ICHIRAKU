@@ -13,6 +13,7 @@ function contactBtn (){
         }
 
         let contact= document.createElement('section')
+        contact.classList.add('contact-slot')
         contact.innerHTML=`
             <div class="form-container">
                 <div class="form-element">
